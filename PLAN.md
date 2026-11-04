@@ -1,4 +1,4 @@
-# Tasbih Counter — Android ilova rejasi (v0.9)
+# Tasbih Counter — Android ilova rejasi (v1.0)
 
 ## Yo'l xaritasi
 1. ~~Zikr jumlalari~~ — **2-releasega** ko'chirildi, talablar 9-bo'limda qayd etildi
@@ -6,7 +6,9 @@
 3. ~~HTML mockup + tuzatishlar~~ — tasdiqlandi (`mockup/index.html`)
 4. ~~Texnologiyani yakuniy tanlash~~ — 1-bo'lim
 5. ~~Prototip~~ — 1-release kodi yozildi (`app/`), Redmi Note 14 da sinaldi; UI sayqal (pastki menyu, insets)
-6. **1.1-release qo'shimchalari** (11-bo'lim): kunlik maqsad + eslatma, vidjet, Quick Settings tugmasi, kengaytirilgan statistika ← *hozir*
+6. ~~1.1-release qo'shimchalari~~ (11-bo'lim) — v0.2.0, Redmi Note 14 da tekshirildi
+7. **Real foydalanish sinovi** (7-bo'lim, 1-qadam): ekran o'chiqda Volume, kombinatsiyalar, qo'ng'iroq/budilnik, proximity, HyperOS ← *hozir*
+8. **2-release — zikr jumlalari** (9-bo'lim): avval manba tanlanadi
 
 ## 0. Kontekst (qarorlar)
 - Shaxsiy foydalanish, Play Market yo'q, APK sideload.
