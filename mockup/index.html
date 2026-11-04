@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasbih mockup</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E1412; --black:#000; --surf:#18201D; --surf2:#202A26; --line:#26312D;
+  --acc:#3DBB8E; --acc-dim:#1E5A45; --gold:#D4B25A; --t1:#E8EDEA; --t2:#93A39C; --danger:#E5736B;
+  --page:#1a1d1c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--t1);font-family:Inter,system-ui,sans-serif;padding:24px 16px 48px}
+h1{font-size:20px;font-weight:500;margin:0 0 4px}
+.lead{color:var(--t2);font-size:14px;margin:0 0 24px}
+.wall{display:flex;flex-wrap:wrap;gap:28px;justify-content:center}
+.slot{display:flex;flex-direction:column;align-items:center;gap:10px}
+.slot>b{font-size:13px;font-weight:500;color:var(--t2)}
+.phone{width:300px;height:640px;border-radius:32px;border:8px solid #2b2f2e;background:var(--bg);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.status{height:24px;flex:none;display:flex;justify-content:space-between;align-items:center;padding:0 16px;font-size:11px;color:var(--t2)}
+.body{flex:1;overflow:auto;padding:8px 16px 16px;scrollbar-width:none}
+.body::-webkit-scrollbar{display:none}
+.nav{flex:none;height:60px;border-top:1px solid var(--line);display:flex;justify-content:space-around;align-items:center;background:var(--bg)}
+.nav div{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:11px;color:var(--t2)}
+.nav div i{font-size:20px}
+.nav .on{color:var(--acc)}
+.title{font-size:22px;font-weight:600;margin:8px 0 14px}
+.card{background:var(--surf);border-radius:16px;padding:14px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.muted{color:var(--t2);font-size:12px}
+.small{font-size:13px}
+.bar{height:4px;border-radius:2px;background:var(--line);overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--acc)}
+.btn{border:0;border-radius:14px;padding:12px 16px;font:500 14px Inter,sans-serif;cursor:pointer}
+.btn.pri{background:var(--acc);color:#04241A;width:100%;font-size:16px;padding:16px}
+.btn.sec{background:var(--surf2);color:var(--t1)}
+.btn.ghost{background:none;color:var(--t2)}
+.seg{display:flex;background:var(--surf2);border-radius:12px;padding:3px;gap:3px}
+.seg span{flex:1;text-align:center;padding:8px 4px;border-radius:9px;font-size:12px;color:var(--t2);cursor:pointer;user-select:none}
+.seg span.on{background:var(--acc-dim);color:var(--t1)}
+.sw{width:40px;height:24px;border-radius:12px;background:var(--line);position:relative;flex:none;cursor:pointer;transition:.15s}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:var(--t2);transition:.15s}
+.sw.on{background:var(--acc)}
+.sw.on::after{left:19px;background:#04241A}
+.sw.locked{opacity:.45;cursor:not-allowed}
+.list>div{padding:12px 0;border-bottom:1px solid var(--line)}
+.list>div:last-child{border-bottom:0}
+.sec-h{font-size:12px;color:var(--acc);margin:18px 0 4px;font-weight:500}
+.ok{color:var(--acc)} .no{color:var(--danger)}
+.chip{font-size:11px;padding:3px 8px;border-radius:8px;background:var(--surf2);color:var(--t2)}
+</style>
+</head>
+<body>
+<h1>Tasbih — mockup v1</h1>
+<p class="lead">Uslub: A (Sokin minimal) + Oddiy tasbihda donalar. Tayyorlanish varag'i, oddiy tasbih va switch'lar bosiladi.</p>
+
+<div class="wall">
+
+<!-- 1. Kirish -->
+<div class="slot"><b>1. Kirish — 3/4 Ruxsatlar</b>
+<div class="phone"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+<div class="body">
+  <div class="row" style="margin:6px 0 18px"><div style="display:flex;gap:6px"><span style="width:6px;height:6px;border-radius:3px;background:var(--line)"></span><span style="width:6px;height:6px;border-radius:3px;background:var(--line)"></span><span style="width:18px;height:6px;border-radius:3px;background:var(--acc)"></span><span style="width:6px;height:6px;border-radius:3px;background:var(--line)"></span></div><span class="muted">O'tkazib yuborish</span></div>
+  <div class="title" style="margin-bottom:4px">Ruxsatlar</div>
+  <p class="muted" style="margin:0 0 14px">Qurilma tugmalari bilan sanash uchun kerak. Bermasangiz ham Oddiy tasbih ishlaydi.</p>
+  <div class="card list">
+    <div class="row"><span class="small"><i class="ti ti-circle-check ok"></i> Bildirishnomalar</span><span class="muted">Berilgan</span></div>
+    <div class="row"><span class="small"><i class="ti ti-circle-x no"></i> Accessibility</span><button class="btn sec" style="padding:6px 12px;font-size:12px">Ochish</button></div>
+    <div class="row"><span class="small"><i class="ti ti-circle-x no"></i> Telefon holati</span><button class="btn sec" style="padding:6px 12px;font-size:12px">Berish</button></div>
+    <div class="row"><span class="small"><i class="ti ti-circle-check ok"></i> Batareya: cheklovsiz</span><span class="muted">Berilgan</span></div>
+    <div class="row"><span class="small"><i class="ti ti-circle-x no"></i> Ilovani mahkamlash</span><button class="btn sec" style="padding:6px 12px;font-size:12px">Ochish</button></div>
+  </div>
+  <div class="sec-h">HyperOS — qo'lda o'chiring</div>
+  <div class="card list small">
+    <div class="row"><span>Power 2× — kamera</span><span class="sw on"></span></div>
+    <div class="row"><span>Vol Down 2× — Quick snap</span><span class="sw"></span></div>
+    <div class="row"><span>Vol Up+Down shortcut</span><span class="sw"></span></div>
+    <div class="row"><span>Bildirishnomada ekran yonishi</span><span class="sw"></span></div>
+  </div>
+  <p class="muted" style="margin:8px 0 0">Switch = "bajardim" belgisi.</p>
+</div>
+<div style="padding:12px 16px;display:flex;gap:10px"><button class="btn sec" style="flex:1">Orqaga</button><button class="btn pri" style="flex:2;font-size:14px;padding:12px">Keyingi</button></div>
+</div></div>
+
+<!-- 2. Asosiy -->
+<div class="slot"><b>2. Asosiy</b>
+<div class="phone" id="home"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+<div class="body">
+  <div class="title">Tasbih</div>
+  <div class="card row" style="margin-bottom:16px;align-items:stretch">
+    <div><div class="muted">Bugun</div><div style="font-size:30px;font-weight:500;line-height:1.2;font-variant-numeric:tabular-nums">1 240</div>
+      <div style="font-size:12px;color:var(--acc);margin-top:2px"><i class="ti ti-trending-up"></i> kechagidan +180</div></div>
+    <div style="text-align:center;padding-left:14px;border-left:1px solid var(--line);display:flex;flex-direction:column;justify-content:center"><i class="ti ti-flame" style="color:var(--gold);font-size:22px"></i><div style="font-size:20px;font-weight:500;line-height:1.1">12</div><div class="muted">kun</div></div>
+  </div>
+  <div id="cards" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"></div>
+</div>
+<button class="btn" style="position:absolute;right:16px;bottom:76px;width:52px;height:52px;border-radius:16px;background:var(--acc);color:#04241A;font-size:22px;padding:0"><i class="ti ti-plus"></i></button>
+<div class="nav"><div class="on"><i class="ti ti-circle-dot"></i>Asosiy</div><div><i class="ti ti-chart-bar"></i>Statistika</div><div><i class="ti ti-settings"></i>Sozlamalar</div></div>
+</div></div>
+
+<!-- 2c. Uzoq bosish menyusi -->
+<div class="slot"><b>2c. Asosiy — kartani uzoq bosish</b>
+<div class="phone"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+<div class="body" style="filter:brightness(.35)">
+  <div class="title">Tasbih</div>
+  <div class="card" style="height:96px;margin-bottom:16px"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div class="card" style="height:104px"></div><div class="card" style="height:104px;visibility:hidden"></div><div class="card" style="height:104px"></div><div class="card" style="height:104px"></div></div>
+</div>
+<div style="position:absolute;top:174px;right:16px;width:128px">
+  <div class="card" style="padding:12px;display:flex;flex-direction:column;gap:6px;min-height:104px;outline:2px solid var(--acc)"><div class="row"><span style="font-size:15px;font-weight:500">33 × 3</span><i class="ti ti-hand-finger muted" style="font-size:16px"></i></div><div style="font-size:26px;font-weight:500;margin-top:auto">41</div><div class="muted">2-qism · 8/33</div></div>
+  <div class="card list small" style="background:var(--surf2);margin-top:8px;padding:2px 12px;width:150px;margin-left:-22px">
+    <div><i class="ti ti-pencil"></i> Tahrirlash</div>
+    <div><i class="ti ti-refresh"></i> Hisobni reset</div>
+    <div style="color:var(--danger)"><i class="ti ti-trash"></i> O'chirish</div>
+  </div>
+</div>
+</div></div>
+
+<!-- 2b. Shablon qo'shish -->
+<div class="slot"><b>2b. Yangi shablon</b>
+<div class="phone"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+<div class="body">
+  <div class="row" style="justify-content:flex-start;gap:10px;margin:8px 0 16px"><i class="ti ti-x" style="font-size:20px"></i><span style="font-size:18px;font-weight:600">Yangi shablon</span></div>
+  <div class="card" style="text-align:center;margin-bottom:16px;padding:16px"><div class="muted">Ko'rinishi</div><div id="pvName" style="font-size:28px;font-weight:500;margin-top:2px">33 × 3</div><div class="muted" id="pvSub">jami 99 · har 33 da signal</div></div>
+  <div class="muted" style="margin-bottom:6px">Nomi (ixtiyoriy)</div>
+  <input id="tName" placeholder="Bo'sh qolsa — avtomatik" style="width:100%;background:var(--surf2);border:0;border-radius:12px;padding:12px;color:var(--t1);font:14px Inter,sans-serif;margin-bottom:14px;outline:none">
+  <div class="muted" style="margin-bottom:6px">Bir qismdagi son</div>
+  <div class="seg" id="segN"><span class="on" data-v="33">33</span><span data-v="99">99</span><span data-v="100">100</span><span data-v="1000">1000</span><span data-v="0">∞</span></div>
+  <input id="customN" type="number" placeholder="Boshqa son" style="width:100%;background:var(--surf2);border:0;border-radius:12px;padding:10px 12px;color:var(--t1);font:13px Inter,sans-serif;margin:8px 0 14px;outline:none">
+  <div id="qRow"><div class="muted" style="margin-bottom:6px">Qismlar soni</div>
+  <div class="row card" style="padding:8px 12px;margin-bottom:14px"><button class="btn sec" id="qMinus" style="padding:6px 14px">−</button><span id="qVal" style="font-size:20px;font-weight:500">3</span><button class="btn sec" id="qPlus" style="padding:6px 14px">+</button></div></div>
+  <div class="muted" style="margin-bottom:6px">Sanash rejimi</div>
+  <div class="seg" style="margin-bottom:14px"><span class="on">Qurilma tugmalari</span><span>Oddiy tasbih</span></div>
+  <div class="muted" style="margin-bottom:6px">Maqsad signali</div>
+  <div class="seg"><span class="on">Vibratsiya</span><span>Ovoz</span><span>Ikkalasi</span></div>
+</div>
+<div style="padding:12px 16px"><button class="btn pri" style="font-size:15px;padding:14px">Saqlash</button></div>
+</div></div>
+
+<!-- 3. Tayyorlanish -->
+<div class="slot"><b>3. Tayyorlanish varag'i</b>
+<div class="phone"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+<div style="position:absolute;inset:0;background:rgba(0,0,0,.55)"></div>
+<div style="position:absolute;left:0;right:0;bottom:0;background:var(--surf);border-radius:24px 24px 0 0;padding:10px 16px 16px;max-height:94%;overflow:auto;scrollbar-width:none">
+  <div style="width:36px;height:4px;border-radius:2px;background:var(--line);margin:0 auto 12px"></div>
+  <div class="row"><span style="font-size:18px;font-weight:600">33</span><span class="muted">Maqsad: 33</span></div>
+  <div class="row" style="margin:12px 0 16px;align-items:flex-end"><div><div class="muted">Joriy hisob</div><div style="font-size:40px;font-weight:500;line-height:1.1;font-variant-numeric:tabular-nums" id="prepCount">27</div></div><button class="btn sec" style="padding:8px 12px;font-size:12px" onclick="if(confirm('Hisobni 0 ga tushirish?'))prepCount.textContent='0'"><i class="ti ti-refresh"></i> Reset</button></div>
+  <div class="muted" style="margin-bottom:6px">Sanash rejimi</div>
+  <div class="seg" id="modeSeg"><span class="on" data-m="dev">Qurilma tugmalari</span><span data-m="tap">Oddiy tasbih</span></div>
+  <div id="devRows">
+    <div class="list" style="margin-top:8px">
+      <div class="row"><span class="small">Ekran himoyasi</span><span class="sw on"></span></div>
+      <div class="row"><span class="small">Volume tugmalar +1</span><span class="sw on" data-k="vol"></span></div>
+      <div class="row"><span class="small">Power tugma +1</span><span class="sw on" data-k="pow"></span></div>
+    </div>
+    <p class="muted" id="kHint" style="margin:0 0 8px;color:var(--gold);display:none">Kamida bitta tugma yoqiq bo'lishi kerak</p>
+    <div style="background:var(--surf2);border-radius:12px;padding:10px 12px;font-size:12px;line-height:1.6;color:var(--t2);margin-bottom:12px">
+      <div><i class="ti ti-player-pause"></i> Vol Up + Down qisqa — pauza / davom</div>
+      <div><i class="ti ti-player-stop"></i> Vol Up + Down 3 s — tugatish</div>
+      <div><i class="ti ti-lock-open"></i> Qulfni 2 s bosib turish — himoyani ochish</div>
+    </div>
+  </div>
+  <div class="muted" style="margin:12px 0 6px">Maqsad signali</div>
+  <div class="seg"><span class="on">Vibratsiya</span><span>Ovoz</span><span>Ikkalasi</span></div>
+  <button class="btn pri" style="margin-top:16px"><i class="ti ti-player-play"></i> Boshlash</button>
+</div>
+</div></div>
+
+<!-- 4. Sanash - qurilma -->
+<div class="slot"><b>4. Sanash — qurilma tugmalari</b>
+<div class="phone" style="background:#000"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+  <div style="position:absolute;top:30px;left:12px;width:36px;height:36px;border-radius:12px;border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;color:var(--t2)" title="Chekka tugma (sozlamada yoqilsa)"><i class="ti ti-player-pause"></i></div>
+  <div style="text-align:center;margin-top:30px" class="muted">33 <i class="ti ti-player-play" style="color:var(--acc)"></i></div>
+  <div style="margin:10px 16px 0;background:var(--surf);border-radius:12px;padding:8px 12px;font-size:11px;color:var(--t2);line-height:1.6">Vol Up+Down — pauza · 3 s — tugatish<br>Qulfni 2 s bosib turing — ochish</div>
+  <div style="flex:1;display:flex;align-items:center;justify-content:center">
+    <svg width="230" height="230" viewBox="0 0 230 230"><circle cx="115" cy="115" r="100" fill="none" stroke="#18201D" stroke-width="10"/><circle cx="115" cy="115" r="100" fill="none" stroke="#3DBB8E" stroke-width="10" stroke-linecap="round" stroke-dasharray="628.3" stroke-dashoffset="114.2" transform="rotate(-90 115 115)"/><text x="115" y="128" text-anchor="middle" fill="#E8EDEA" font-size="64" font-weight="500" font-family="Inter">27</text><text x="115" y="160" text-anchor="middle" fill="#93A39C" font-size="15" font-family="Inter">/ 33</text></svg>
+  </div>
+  <div style="text-align:center;padding-bottom:32px;color:var(--t2)"><div style="width:56px;height:56px;border-radius:50%;border:1px solid var(--line);margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:22px"><i class="ti ti-lock"></i></div><span style="font-size:11px">2 s bosib turing</span></div>
+</div></div>
+
+<!-- 5. Sanash - oddiy tasbih -->
+<div class="slot"><b>5. Sanash — oddiy tasbih (bosing)</b>
+<div class="phone"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+  <div style="text-align:center;margin-top:6px" class="muted">33</div>
+  <div style="position:relative;height:250px;display:flex;align-items:center;justify-content:center">
+    <svg id="beads" width="230" height="230" viewBox="0 0 230 230"></svg>
+    <div style="position:absolute;text-align:center"><div id="tapN" style="font-size:52px;font-weight:500;font-variant-numeric:tabular-nums">27</div><div class="muted" id="tapT">/ 33</div></div>
+  </div>
+  <div style="flex:1;display:flex;align-items:center;justify-content:center">
+    <button id="tapBtn" aria-label="+1" style="width:200px;height:200px;border-radius:50%;border:0;background:var(--surf);color:var(--acc);font-size:15px;cursor:pointer;transition:transform .08s">bosing</button>
+  </div>
+  <div class="row" style="padding:0 28px 22px"><button class="btn ghost" id="undoBtn"><i class="ti ti-arrow-back-up" style="font-size:20px"></i></button><button class="btn ghost"><i class="ti ti-player-pause" style="font-size:20px"></i></button><button class="btn ghost"><i class="ti ti-player-stop" style="font-size:20px"></i></button></div>
+</div></div>
+
+<!-- 6. Statistika -->
+<div class="slot"><b>6. Statistika</b>
+<div class="phone"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+<div class="body">
+  <div class="title">Statistika</div>
+  <div class="seg" style="margin-bottom:16px"><span>Bugun</span><span class="on">Hafta</span><span>Oy</span><span>Jami</span></div>
+  <div class="row" style="align-items:flex-end;margin-bottom:14px"><div><div class="muted">Shu hafta</div><div style="font-size:36px;font-weight:500;font-variant-numeric:tabular-nums">8 420</div></div><span class="chip"><i class="ti ti-flame" style="color:var(--gold)"></i> 12 kun</span></div>
+  <div class="card" style="margin-bottom:16px"><div id="chart" style="display:flex;align-items:flex-end;gap:8px;height:100px"></div><div style="display:flex;gap:8px;margin-top:6px" class="muted" id="days"></div></div>
+  <div class="sec-h" style="margin-top:0">Shablonlar bo'yicha</div>
+  <div class="card list small" id="byTpl"></div>
+  <div class="sec-h">Sessiyalar</div>
+  <div class="card list small">
+    <div class="row"><span>33 · <span class="muted">20:14</span></span><span>+99 <span class="muted">· 6 daq</span></span></div>
+    <div class="row"><span>1000 · <span class="muted">08:02</span></span><span>+640 <span class="muted">· 31 daq</span></span></div>
+  </div>
+</div>
+<div class="nav"><div><i class="ti ti-circle-dot"></i>Asosiy</div><div class="on"><i class="ti ti-chart-bar"></i>Statistika</div><div><i class="ti ti-settings"></i>Sozlamalar</div></div>
+</div></div>
+
+<!-- 7. Sozlamalar -->
+<div class="slot"><b>7. Sozlamalar</b>
+<div class="phone"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+<div class="body">
+  <div class="title">Sozlamalar</div>
+  <div class="card list small" style="margin-bottom:4px"><div class="row"><span><i class="ti ti-layout-grid" style="color:var(--acc)"></i> Shablonlar</span><span class="muted">6 <i class="ti ti-chevron-right"></i></span></div></div>
+  <div class="sec-h">Sanash</div>
+  <div class="card list small">
+    <div class="row"><span>Har sanashda vibratsiya</span><span class="sw on"></span></div>
+    <div class="row"><span>Vibratsiya kuchi</span><span class="muted">O'rtacha <i class="ti ti-chevron-right"></i></span></div>
+    <div class="row"><span>Oraliq signal</span><span class="muted">Har 33 <i class="ti ti-chevron-right"></i></span></div>
+  </div>
+  <div class="sec-h">Qurilma tugmalari</div>
+  <div class="card list small">
+    <div class="row"><span>Chekka tugma</span><span class="sw"></span></div>
+    <div class="row"><span>Kombinatsiyalar</span><span class="muted"><i class="ti ti-chevron-right"></i></span></div>
+  </div>
+  <div class="sec-h">Himoya</div>
+  <div class="card list small">
+    <div class="row"><span>Cho'ntak rejimi (proximity)</span><span class="sw on"></span></div>
+    <div class="row"><span>Qulf ekrani ustida ochish</span><span class="sw on"></span></div>
+  </div>
+  <div class="sec-h">Bildirishnoma</div>
+  <div class="card list small"><div class="row"><span>Sessiyada "Bezovta qilmang"</span><span class="sw"></span></div></div>
+  <div class="sec-h">Ko'rinish</div>
+  <div class="card list small">
+    <div class="row"><span>Mavzu</span><span class="muted">Qorong'i <i class="ti ti-chevron-right"></i></span></div>
+    <div class="row"><span>Rang</span><span style="display:flex;gap:6px"><i style="width:16px;height:16px;border-radius:50%;background:#3DBB8E;outline:2px solid var(--t1);outline-offset:1px"></i><i style="width:16px;height:16px;border-radius:50%;background:#D4B25A"></i><i style="width:16px;height:16px;border-radius:50%;background:#5B9BE0"></i><i style="width:16px;height:16px;border-radius:50%;background:#9C84E0"></i></span></div>
+    <div class="row"><span>Til</span><span class="muted">O'zbekcha <i class="ti ti-chevron-right"></i></span></div>
+  </div>
+  <div class="sec-h">Ma'lumotlar</div>
+  <div class="card list small">
+    <div class="row"><span>Eksport / Import</span><span class="muted"><i class="ti ti-chevron-right"></i></span></div>
+    <div class="row"><span style="color:var(--danger)">Tarixni tozalash</span><span></span></div>
+  </div>
+  <div class="sec-h">Ruxsatlar</div>
+  <div class="card list small"><div class="row"><span>Ruxsatlar va telefon sozlamalari</span><span class="muted"><i class="ti ti-alert-circle no"></i> 2 <i class="ti ti-chevron-right"></i></span></div></div>
+</div>
+<div class="nav"><div><i class="ti ti-circle-dot"></i>Asosiy</div><div><i class="ti ti-chart-bar"></i>Statistika</div><div class="on"><i class="ti ti-settings"></i>Sozlamalar</div></div>
+</div></div>
+
+<!-- 7b. Shablonlar -->
+<div class="slot"><b>7b. Sozlamalar → Shablonlar</b>
+<div class="phone"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+<div class="body">
+  <div class="row" style="justify-content:flex-start;gap:10px;margin:8px 0 6px"><i class="ti ti-arrow-left" style="font-size:20px"></i><span style="font-size:18px;font-weight:600">Shablonlar</span></div>
+  <p class="muted" style="margin:0 0 12px">Tartibni o'zgartirish — <i class="ti ti-grip-vertical"></i> ni sudrab. Bosh sahifada shu tartibda chiqadi.</p>
+  <div class="card list small" id="tplList" style="padding:4px 12px"></div>
+</div>
+<button class="btn" style="position:absolute;right:16px;bottom:20px;width:52px;height:52px;border-radius:16px;background:var(--acc);color:#04241A;font-size:22px;padding:0"><i class="ti ti-plus"></i></button>
+<div id="delModal" style="position:absolute;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:24px">
+  <div class="card" style="background:var(--surf2);width:100%;padding:18px">
+    <div style="font-size:16px;font-weight:600;margin-bottom:6px">Shablonni o'chirish?</div>
+    <p class="muted" style="margin:0 0 16px;line-height:1.5"><b id="delName" style="color:var(--t1);font-weight:500"></b> o'chiriladi. Tarix va statistika saqlanib qoladi.</p>
+    <div style="display:flex;flex-direction:column;gap:8px"><button class="btn" style="width:100%;background:var(--danger);color:#2a0b08" onclick="delModal.style.display='none'">O'chirish</button><button class="btn ghost" style="width:100%" onclick="delModal.style.display='none'">Bekor qilish</button></div>
+  </div>
+</div>
+</div></div>
+
+<!-- 8. Eksport / Import -->
+<div class="slot"><b>8. Eksport / Import</b>
+<div class="phone"><div class="status"><span>9:41</span><span><i class="ti ti-battery-3"></i></span></div>
+<div class="body">
+  <div class="row" style="justify-content:flex-start;gap:10px;margin:8px 0 14px"><i class="ti ti-arrow-left" style="font-size:20px"></i><span style="font-size:18px;font-weight:600">Eksport / Import</span></div>
+  <div class="card" style="margin-bottom:12px"><div class="muted">Oxirgi zaxira</div><div class="small" style="margin-top:2px">28-oktabr, 21:40</div></div>
+  <div class="card" style="margin-bottom:12px">
+    <div class="small" style="font-weight:500;margin-bottom:4px">Eksport</div>
+    <p class="muted" style="margin:0 0 10px">Shablonlar, tarix va sozlamalar bitta JSON faylga.</p>
+    <button class="btn sec" style="width:100%"><i class="ti ti-download"></i> Faylga saqlash</button>
+  </div>
+  <div class="card">
+    <div class="small" style="font-weight:500;margin-bottom:4px">Import</div>
+    <div style="background:var(--surf2);border-radius:12px;padding:10px 12px;margin:6px 0 12px;font-size:12px;line-height:1.6"><i class="ti ti-file"></i> tasbih-backup-2026-10-28.json<br><span class="muted">5 shablon · 340 sessiya · 2026-01-03 dan</span></div>
+    <div class="list small" id="impMode">
+      <div class="row" data-v="merge" style="cursor:pointer"><span><i class="ti ti-circle-dot ok"></i> Birlashtirish</span><span class="muted">yangilari qo'shiladi</span></div>
+      <div class="row" data-v="replace" style="cursor:pointer"><span><i class="ti ti-circle"></i> Almashtirish</span><span class="muted">hammasi o'chadi</span></div>
+    </div>
+    <p id="impWarn" class="muted" style="display:none;color:var(--gold);margin:4px 0 0">Joriy ma'lumot avval avtomatik zaxiraga saqlanadi.</p>
+    <button class="btn pri" style="margin-top:12px;font-size:14px;padding:12px"><i class="ti ti-upload"></i> Import qilish</button>
+  </div>
+</div>
+</div></div>
+
+</div>
+
+<script>
+const tpls=[["33",27,33,0,"dev"],["33 × 3",41,99,33,"tap"],["99",0,99,0,"dev"],["100",100,100,0,"dev"],["1000",640,1000,0,"dev"],["Cheksiz",2314,0,0,"tap"]];
+const fmt=v=>v.toLocaleString('ru');
+cards.innerHTML=tpls.map(([n,c,t,s,m])=>{
+  const done=t&&c>=t;
+  const sub=!t?'Cheksiz':s?`${Math.min(Math.floor(c/s)+1,t/s)}-qism · ${done?s:c%s}/${s}`:`/ ${t}`;
+  return `<div class="card" style="padding:12px;display:flex;flex-direction:column;gap:6px;min-height:104px">
+  <div class="row"><span style="font-size:15px;font-weight:500">${n}</span><i class="ti ${m=='tap'?'ti-hand-finger':'ti-device-mobile'} muted" style="font-size:16px"></i></div>
+  <div style="font-size:26px;font-weight:500;font-variant-numeric:tabular-nums;margin-top:auto">${fmt(c)} ${done?'<i class="ti ti-check" style="color:var(--gold);font-size:18px"></i>':''}</div>
+  <div class="muted">${sub}</div></div>`}).join('');
+
+document.querySelectorAll('.sw').forEach(s=>s.onclick=()=>{
+  if(s.dataset.k){const o=document.querySelector(`.sw[data-k=${s.dataset.k=='vol'?'pow':'vol'}]`);
+    if(s.classList.contains('on')&&!o.classList.contains('on'))return;
+    s.classList.toggle('on');
+    const on=[...document.querySelectorAll('.sw[data-k]')].filter(x=>x.classList.contains('on'));
+    document.querySelectorAll('.sw[data-k]').forEach(x=>x.classList.toggle('locked',on.length==1&&x.classList.contains('on')));
+    kHint.style.display=on.length==1?'block':'none';return}
+  s.classList.toggle('on')});
+document.querySelectorAll('.seg').forEach(g=>g.onclick=e=>{if(e.target.tagName!='SPAN')return;g.querySelectorAll('span').forEach(x=>x.classList.remove('on'));e.target.classList.add('on');
+  if(g.id=='modeSeg')devRows.style.display=e.target.dataset.m=='tap'?'none':'block'});
+
+let n=27;const T=33;
+function draw(){let h='';for(let i=0;i<T;i++){const a=i/T*2*Math.PI-Math.PI/2,x=115+100*Math.cos(a),y=115+100*Math.sin(a);h+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="8" fill="${i<Math.min(n,T)?(n>=T?'#D4B25A':'#3DBB8E'):'#22302B'}"/>`}
+  beads.innerHTML=h;tapN.textContent=n;tapT.innerHTML=n>=T?'/ 33 <i class="ti ti-check" style="color:var(--gold)"></i>':'/ 33'}
+draw();
+tapBtn.onclick=()=>{n++;draw();navigator.vibrate&&navigator.vibrate(n==T?400:20);tapBtn.style.transform='scale(.94)';setTimeout(()=>tapBtn.style.transform='',90)};
+undoBtn.onclick=()=>{if(n>0){n--;draw()}};
+
+const wk=[[1100,'Du'],[1420,'Se'],[980,'Ch'],[1610,'Pa'],[1200,'Ju'],[870,'Sh'],[1240,'Ya']],mx=1610;
+chart.innerHTML=wk.map(([v],i)=>`<div style="flex:1;height:${v/mx*100}%;background:${i==6?'var(--acc)':'var(--acc-dim)'};border-radius:6px 6px 2px 2px"></div>`).join('');
+days.innerHTML=wk.map(([,d])=>`<span style="flex:1;text-align:center">${d}</span>`).join('');
+byTpl.innerHTML=[["1000",4200],["33",2310],["Cheksiz",1910]].map(([k,v])=>`<div><div class="row"><span>${k}</span><span style="font-variant-numeric:tabular-nums">${v.toLocaleString('ru')}</span></div><div class="bar" style="margin-top:6px"><i style="width:${v/4200*100}%"></i></div></div>`).join('');
+
+tplList.innerHTML=tpls.map(([n,c,t,s,m])=>`<div class="row"><span style="display:flex;align-items:center;gap:10px"><i class="ti ti-grip-vertical muted" style="font-size:18px;cursor:grab"></i><span><span style="font-weight:500">${n}</span><br><span class="muted">${!t?'Maqsadsiz':s?`jami ${t} · ${t/s} qism`:`maqsad ${t}`} · ${m=='tap'?'oddiy tasbih':'qurilma'}</span></span></span><span style="display:flex;gap:4px"><button class="btn ghost" style="padding:6px" aria-label="Tahrirlash"><i class="ti ti-pencil" style="font-size:18px"></i></button><button class="btn ghost" style="padding:6px" aria-label="O'chirish" onclick="delName.textContent='${n}';delModal.style.display='flex'"><i class="ti ti-trash" style="font-size:18px"></i></button></span></div>`).join('');
+
+let pN=33,pQ=3;
+function pv(){const c=+customN.value;const n=c>0?c:pN;qRow.style.display=n?'block':'none';
+  pvName.textContent=tName.value||(!n?'Cheksiz':pQ>1?`${n} × ${pQ}`:`${n}`);
+  pvSub.textContent=!n?'maqsadsiz, har 33 da signal':pQ>1?`jami ${n*pQ} · har ${n} da signal`:`maqsad ${n}`}
+segN.addEventListener('click',e=>{if(e.target.dataset.v==null)return;pN=+e.target.dataset.v;customN.value='';pv()});
+customN.oninput=tName.oninput=pv;
+qMinus.onclick=()=>{if(pQ>1){pQ--;qVal.textContent=pQ;pv()}};
+qPlus.onclick=()=>{if(pQ<10){pQ++;qVal.textContent=pQ;pv()}};
+pv();
+
+impMode.onclick=e=>{const r=e.target.closest('[data-v]');if(!r)return;impMode.querySelectorAll('[data-v] i').forEach(i=>i.className='ti ti-circle');r.querySelector('i').className='ti ti-circle-dot ok';impWarn.style.display=r.dataset.v=='replace'?'block':'none'};
+</script>
+</body>
+</html>

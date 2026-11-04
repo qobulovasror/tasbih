@@ -1,0 +1,18 @@
+# Gradle / build
+.gradle/
+.kotlin/
+build/
+captures/
+
+# Local, machine-specific
+local.properties
+.idea/
+*.iml
+.DS_Store
+
+# Signing keys
+*.jks
+*.keystore
+
+# Claude session notes
+.claude-handoff*

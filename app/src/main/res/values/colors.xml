@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#FF0E1412</color>
+    <color name="accent">#FF3DBB8E</color>
+    <!-- vidjet: yorug' mavzu -->
+    <color name="w_bg">#FFFFFFFF</color>
+    <color name="w_text">#FF14201B</color>
+    <color name="w_muted">#FF4F605A</color>
+    <color name="w_accent">#FF1E7A5C</color>
+    <color name="w_on_accent">#FFFFFFFF</color>
+    <color name="w_track">#FFD3DCD7</color>
+</resources>
